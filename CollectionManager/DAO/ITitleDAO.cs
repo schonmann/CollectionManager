@@ -12,5 +12,6 @@ namespace CollectionManager.DAO
         Title GetById(long ID);
         Title[] GetAll();
         Title[] GetByPattern(string pattern);
+        Title[] GetByType(string type);
     }
 }

@@ -13,12 +13,20 @@ namespace CollectionManager.DAO
             return null;
         }
         
+        //Returns all title registers.
         public Title[] GetAll()
         {
             return null;
         }
-        
+
+        //Returns all by name pattern.
         public Title[] GetByPattern(string pattern)
+        {
+            return null;
+        }
+
+        //Returns all by title type.
+        public Title[] GetByType(string type)
         {
             return null;
         }

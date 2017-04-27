@@ -182,10 +182,8 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
-    <Compile Include="Controllers\CdController.cs" />
-    <Compile Include="Controllers\DvdController.cs" />
+    <Compile Include="Controllers\TitleController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\BookController.cs" />
     <Compile Include="DAO\TitleDAO.cs" />
     <Compile Include="DAO\ITitleDAO.cs" />
     <Compile Include="Global.asax.cs">

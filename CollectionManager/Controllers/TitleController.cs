@@ -11,33 +11,34 @@ namespace CollectionManager.Controllers
 {
     public class TitleController : ApiController
     {
-        const string baseURL = "api/cd";
+        const string baseURL = "api/title";
 
-        // Get all CD's.
+        [HttpGet]
         [Route(baseURL + "/all")]
-        public Title[] Get()
+        public Title[] GetAll()
         {
             return new TitleDAO().GetAll();
         }
 
-        // Get CD's by pattern.
+        [HttpGet]
         [Route(baseURL + "/byPattern/{pattern}")]
-        public Title[] Get(string pattern)
+        public Title[] GetByPattern(string pattern)
         {
             return new TitleDAO().GetByPattern(pattern);
         }
 
-        // Get CD by id.
+        [HttpGet]
         [Route(baseURL + "/byId/{id}")]
-        public Title Get(long id)
+        public Title GetById(long id)
         {
             return new TitleDAO().GetById(id);
         }
 
-        [Route(baseURL + "byType/{type}")]
-        public Title[] Get(string type)
+        [HttpGet]
+        [Route(baseURL + "/byType/{type}")]
+        public Title[] GetByType(string type)
         {
-            return new TitleDAO().GetById(id);
+            return new TitleDAO().GetByType(type);
         }
     }
 }

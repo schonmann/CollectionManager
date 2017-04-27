@@ -7,9 +7,7 @@ namespace CollectionManager.Models
 {
     public enum TitleType
     {
-        Book,
-        Cd,
-        Dvd
+        Book,Cd,Dvd
     }
 
     public class Title
@@ -20,5 +18,6 @@ namespace CollectionManager.Models
         public DateTime Date { get; set; }
         public Dictionary<String, String> DataSheet {get;set;}
         public Place Place { get; set; }
+        public TitleType Type { get; set; }
     }
 }
