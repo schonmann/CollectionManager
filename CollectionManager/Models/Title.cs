@@ -5,11 +5,6 @@ using System.Web;
 
 namespace CollectionManager.Models
 {
-    public enum TitleType
-    {
-        Book,Cd,Dvd
-    }
-
     public class Title
     {
         public long Id { get; set; }

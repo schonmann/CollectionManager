@@ -1,10 +1,5 @@
 ﻿using CollectionManager.DAO;
 using CollectionManager.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 
 namespace CollectionManager.Controllers
@@ -17,28 +12,35 @@ namespace CollectionManager.Controllers
         [Route(baseURL + "/all")]
         public Title[] GetAll()
         {
-            return new TitleDAO().GetAll();
+            return new TitleElasticServerDAO().GetAll();
         }
 
         [HttpGet]
         [Route(baseURL + "/byPattern/{pattern}")]
         public Title[] GetByPattern(string pattern)
         {
-            return new TitleDAO().GetByPattern(pattern);
+            return new TitleElasticServerDAO().GetByPattern(pattern);
         }
 
         [HttpGet]
         [Route(baseURL + "/byId/{id}")]
         public Title GetById(long id)
         {
-            return new TitleDAO().GetById(id);
+            return new TitleElasticServerDAO().GetById(id);
         }
 
         [HttpGet]
         [Route(baseURL + "/byType/{type}")]
         public Title[] GetByType(string type)
         {
-            return new TitleDAO().GetByType(type);
+            return new TitleElasticServerDAO().GetByType(type);
+        }
+
+        [HttpPost]
+        [Route(baseURL + "/insert")]
+        public void InsertTitle([FromBody] Title title)
+        {
+            new TitleElasticServerDAO().InsertTitle(title);
         }
     }
 }
