@@ -10,7 +10,7 @@ namespace CollectionManager.Models
     [ElasticsearchType(Name = "place", IdProperty = "Id")]
     public class Place
     {
-        public const string DEFAULT_INDEX = "places";
+        public const string ELASTIC_INDEX = "places";
 
         [Text]
         [JsonProperty("id")]

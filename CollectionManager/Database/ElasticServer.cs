@@ -9,8 +9,7 @@ namespace CollectionManager.Database
     public static class ElasticServer
     {
         private static ElasticClient elastic;
-        private static String[] indexes = { Item.DEFAULT_INDEX, Place.DEFAULT_INDEX, Person.DEFAULT_INDEX };
-
+        private static String[] indexes = { Item.ELASTIC_INDEX, Place.ELASTIC_INDEX, Person.ELASTIC_INDEX, Loan.ELASTIC_INDEX };
         public static void Initialize()
         {
             //Get connection parameters from app settings.
@@ -20,9 +19,8 @@ namespace CollectionManager.Database
             //Add settings to set index mapping for the model classes and basic auth parameters.
             var settings = new ConnectionSettings(new Uri(elasticAddress))
                 .MapDefaultTypeIndices(m => m
-                .Add(typeof(Item), Item.DEFAULT_INDEX)
-                .Add(typeof(Place), Place.DEFAULT_INDEX)
-                .Add(typeof(Person), Person.DEFAULT_INDEX))
+                .Add(typeof(Item), Item.ELASTIC_INDEX).Add(typeof(Place), Place.ELASTIC_INDEX)
+                .Add(typeof(Person), Person.ELASTIC_INDEX).Add(typeof(Loan), Loan.ELASTIC_INDEX))
                 .BasicAuthentication(elasticUser, elasticPassword);
             //Initialize elastic client with our predefined settings.
             elastic = new ElasticClient(settings);

@@ -9,7 +9,7 @@ namespace CollectionManager.Models
     [ElasticsearchType(Name = "person", IdProperty = "Id")]
     public class Person
     {
-        public const string DEFAULT_INDEX = "people";
+        public const string ELASTIC_INDEX = "people";
 
         [Text(Name = "id")]
         public string Id { get; set; }

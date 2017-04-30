@@ -189,9 +189,12 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\InfoController.cs" />
+    <Compile Include="Controllers\LoanController.cs" />
     <Compile Include="Controllers\PlaceController.cs" />
     <Compile Include="Controllers\ItemController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="DAO\LoanDAO.cs" />
+    <Compile Include="DAO\LoanElasticServerDAO.cs" />
     <Compile Include="DAO\PlaceDAO.cs" />
     <Compile Include="DAO\PlaceElasticServerDAO.cs" />
     <Compile Include="DAO\InfoDAO.cs" />
@@ -203,6 +206,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Loan.cs" />
+    <Compile Include="Models\LoanWrapper.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\Place.cs" />
     <Compile Include="Models\Item.cs" />

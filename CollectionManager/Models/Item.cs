@@ -11,7 +11,7 @@ namespace CollectionManager.Models
     [ElasticsearchType(Name = "item", IdProperty = "Id")]
     public class Item
     {
-        public const string DEFAULT_INDEX = "items";
+        public const string ELASTIC_INDEX = "items";
 
         [Text]
         [JsonProperty("id")]
@@ -33,8 +33,12 @@ namespace CollectionManager.Models
         [JsonProperty("place_id")]
         public long PlaceId { get; set; }
          
-        [JsonConverter(typeof(StringEnumConverter))]
+        [Text]
         [JsonProperty("type")]
         public ItemType Type { get; set; }
+        
+        [Nested]
+        [JsonProperty("loans")]
+        public List<Loan> Loans { get; set; }
     }
 }

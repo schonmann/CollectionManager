@@ -2,12 +2,15 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace CollectionManager.DAO
 {
-    public interface InfoDAO
+    interface LoanDAO
     {
-        String[] GetTypes(string locale);
+        void StartLoan();
+        void EndLoan();
+        Loan GetById();
     }
 }
