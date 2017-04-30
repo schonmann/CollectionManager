@@ -14,7 +14,7 @@ namespace CollectionManager
     {
         protected void Application_Start()
         {
-            ElasticDb.Initialize();
+            ElasticServer.Initialize();
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

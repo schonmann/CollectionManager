@@ -77,3 +77,6 @@ c:\Users\xuma\Documents\Visual Studio 2017\Projects\CollectionManager\Collection
 c:\Users\xuma\Documents\Visual Studio 2017\Projects\CollectionManager\CollectionManager\bin\Elasticsearch.Net.xml
 c:\Users\xuma\Documents\Visual Studio 2017\Projects\CollectionManager\CollectionManager\bin\Nest.pdb
 c:\Users\xuma\Documents\Visual Studio 2017\Projects\CollectionManager\CollectionManager\bin\Nest.xml
+C:\Users\xuma\Documents\Visual Studio 2017\Projects\CollectionManager\CollectionManager\bin\System.Web.Cors.dll
+C:\Users\xuma\Documents\Visual Studio 2017\Projects\CollectionManager\CollectionManager\bin\System.Web.Http.Cors.dll
+C:\Users\xuma\Documents\Visual Studio 2017\Projects\CollectionManager\CollectionManager\bin\System.Web.Http.Cors.xml
