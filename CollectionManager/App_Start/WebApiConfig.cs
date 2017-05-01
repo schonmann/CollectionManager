@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web.Http;
 using System.Web.Http.Cors;
@@ -19,7 +20,7 @@ namespace CollectionManager
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
-            var corsAttr = new EnableCorsAttribute("http://localhost:9000", "*", "*");
+            var corsAttr = new EnableCorsAttribute(ConfigurationManager.AppSettings.Get("ClientAddress"), "*", "*");
             config.EnableCors(corsAttr);
         }
     }
