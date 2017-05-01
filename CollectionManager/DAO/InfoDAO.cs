@@ -8,6 +8,6 @@ namespace CollectionManager.DAO
 {
     public interface InfoDAO
     {
-        String[] GetTypes(string locale);
+        String[] GetTypes();
     }
 }

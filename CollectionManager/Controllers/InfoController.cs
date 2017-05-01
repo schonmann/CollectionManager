@@ -13,17 +13,10 @@ namespace CollectionManager.Controllers
     public class InfoController : ApiController
     {
         [HttpGet]
-        [Route("types/pt-br")]
+        [Route("types/all")]
         public string[] GetTypesPt()
         {
-            return new InfoElasticServerDAO().GetTypes("pt-br");
-        }
-
-        [HttpGet]
-        [Route("types/en-us")]
-        public string[] GetTypesEn()
-        {
-            return new InfoElasticServerDAO().GetTypes("en-us");
+            return new InfoElasticServerDAO().GetTypes();
         }
     }
 }
