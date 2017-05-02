@@ -39,9 +39,16 @@ namespace CollectionManager.Controllers
 
         [HttpPost]
         [Route("insert")]
-        public void InsertTitle([FromBody] Item title)
+        public void InsertTitle([FromBody] Item item)
         {
-            new ItemElasticServerDAO().InsertTitle(title);
+            new ItemElasticServerDAO().InsertTitle(item);
+        }
+
+        [HttpPost]
+        [Route("delete")]
+        public void Delete([FromBody]Item item)
+        {
+            new ItemElasticServerDAO().Delete(item);
         }
     }
 }

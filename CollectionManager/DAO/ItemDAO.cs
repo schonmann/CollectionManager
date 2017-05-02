@@ -14,5 +14,6 @@ namespace CollectionManager.DAO
         Item[] GetByPattern(string pattern);
         Item[] GetByType(string type);
         void InsertTitle(Item title);
+        void Delete(Item item);
     }
 }
