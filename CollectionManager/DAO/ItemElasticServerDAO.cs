@@ -11,50 +11,42 @@ namespace CollectionManager.DAO
     public class ItemElasticServerDAO : ItemDAO
     {    
 
-        public Item GetById(long Id) 
+        public Item GetById(string Id) 
         {
             var elastic = ElasticServer.GetClient();
-            return null;
+            var res = elastic.Get<Item>(new Item { Id = Id });
+            if (res.ServerError != null) throw new System.Exception(res.ServerError.Error.ToString());
+            return res.Source;
         }
         
         //Returns all title registers.
         public Item[] GetAll()
         {
-            var results = new List<Item>();
             var elastic = ElasticServer.GetClient();
-            var result = elastic.Search<Item>(s => s.From(0).Size(2000).AllTypes().Scroll("5m"));
-            if(result.ServerError != null) throw new System.Exception(result.ServerError.Error.ToString());
-            return new List<Item>(result.Documents).ToArray();
+            var res = elastic.Search<Item>(s => s.AllTypes());
+            if(res.ServerError != null) throw new System.Exception(res.ServerError.Error.ToString());
+            return new List<Item>(res.Documents).ToArray();
         }
-
-        //Returns all by name pattern.
-        public Item[] GetByPattern(string pattern)
-        {
-            return null;
-        }
-
-        //Returns all by title type.
-        public Item[] GetByType(string type)
-        {
-            return null;
-        }
-
+        
         //Insert title to database.
-        public void InsertTitle(Item t)
+        public void InsertTitle(Item item)
         {
             var elastic = ElasticServer.GetClient();
-            var titleType = t.Type.ToString().ToLower();
-            var result = elastic.Index(t, m => m.Type(titleType));
+            var itemType = item.Type.ToString().ToLower();
+            var result = elastic.Index(item, m => m.Type(itemType));
             if(result.ServerError != null) throw new System.Exception(result.ServerError.Error.ToString());
         }
 
         //Update title in the database.
-        public void UpdateTitle(Item t)
+        public void UpdateTitle(Item item)
         {
-
+            var elastic = ElasticServer.GetClient();
+            var path = new DocumentPath<Item>(item);
+            var res = elastic.Update<Item>(path, x => x.Doc(item));
+            if (res.ServerError != null) throw new System.Exception(res.ServerError.Error.ToString());
         }
 
-        public void Delete(Item item)
+        public void DeleteTitle(Item item)
         {
             var elastic = ElasticServer.GetClient();
             var titleType = item.Type.ToString().ToLower();

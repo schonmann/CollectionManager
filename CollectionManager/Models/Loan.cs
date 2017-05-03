@@ -31,5 +31,9 @@ namespace CollectionManager.Models
         [Date]
         [JsonProperty("end_date")]
         public DateTime EndDate { get; set; }
+
+        [Boolean]
+        [JsonProperty("ended")]
+        public bool Ended{ get; set; }
     }
 }

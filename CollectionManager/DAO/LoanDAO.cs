@@ -9,8 +9,10 @@ namespace CollectionManager.DAO
 {
     interface LoanDAO
     {
-        void StartLoan();
-        void EndLoan();
-        Loan GetById();
+        void StartLoan(ModelWrapper wrapper);
+        void EndLoan(ModelWrapper wrapper);
+        Loan[] GetByPerson(string id);
+        Loan[] GetByItem(string id);
+        Loan[] GetAll();
     }
 }

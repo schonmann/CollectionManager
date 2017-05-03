@@ -19,8 +19,10 @@ namespace CollectionManager.Database
             //Add settings to set index mapping for the model classes and basic auth parameters.
             var settings = new ConnectionSettings(new Uri(elasticAddress))
                 .MapDefaultTypeIndices(m => m
-                .Add(typeof(Item), Item.ELASTIC_INDEX).Add(typeof(Place), Place.ELASTIC_INDEX)
-                .Add(typeof(Person), Person.ELASTIC_INDEX).Add(typeof(Loan), Loan.ELASTIC_INDEX))
+                .Add(typeof(Item), Item.ELASTIC_INDEX)
+                .Add(typeof(Place), Place.ELASTIC_INDEX)
+                .Add(typeof(Person), Person.ELASTIC_INDEX)
+                .Add(typeof(Loan), Loan.ELASTIC_INDEX))
                 .BasicAuthentication(elasticUser, elasticPassword);
             //Initialize elastic client with our predefined settings.
             elastic = new ElasticClient(settings);

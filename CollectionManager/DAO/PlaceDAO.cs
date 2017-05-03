@@ -5,5 +5,7 @@ namespace CollectionManager.DAO
     {
         void InsertPlace(Place place);
         Place[] GetAllPlaces();
+        void UpdatePlace(Place place);
+        void DeletePlace(Place place);
     }
 }

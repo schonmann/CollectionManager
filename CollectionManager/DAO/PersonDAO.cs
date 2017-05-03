@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace CollectionManager.DAO
 {
-    interface ItemDAO
+    interface PersonDAO
     {
-        Item GetById(string ID);
-        Item[] GetAll();
-        void InsertTitle(Item title);
-        void DeleteTitle(Item item);
+        void InsertPerson(Person person);
+        Person[] GetAllPerson();
+        void UpdatePerson(Person person);
+        void DeletePerson(Person person);
     }
 }

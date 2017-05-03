@@ -17,24 +17,10 @@ namespace CollectionManager.Controllers
         }
 
         [HttpGet]
-        [Route("byPattern/{pattern}")]
-        public Item[] GetByPattern(string pattern)
-        {
-            return new ItemElasticServerDAO().GetByPattern(pattern);
-        }
-
-        [HttpGet]
         [Route("byId/{id}")]
-        public Item GetById(long id)
+        public Item GetById(string id)
         {
             return new ItemElasticServerDAO().GetById(id);
-        }
-
-        [HttpGet]
-        [Route("byType/{type}")]
-        public Item[] GetByType(string type)
-        {
-            return new ItemElasticServerDAO().GetByType(type);
         }
 
         [HttpPost]
@@ -46,9 +32,9 @@ namespace CollectionManager.Controllers
 
         [HttpPost]
         [Route("delete")]
-        public void Delete([FromBody]Item item)
+        public void DeleteTitle([FromBody]Item item)
         {
-            new ItemElasticServerDAO().Delete(item);
+            new ItemElasticServerDAO().DeleteTitle(item);
         }
     }
 }

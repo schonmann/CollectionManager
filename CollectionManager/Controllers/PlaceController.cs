@@ -25,5 +25,19 @@ namespace CollectionManager.Controllers
         {
             return new PlaceElasticServerDAO().GetAllPlaces();
         }
+
+        [HttpPost]
+        [Route("update")]
+        public void UpdatePlace([FromBody] Place place)
+        {
+            new PlaceElasticServerDAO().UpdatePlace(place);
+        }
+
+        [HttpPost]
+        [Route("delete")]
+        public void DeletePlace([FromBody] Place place)
+        {
+            new PlaceElasticServerDAO().DeletePlace(place);
+        }
     }
 }
