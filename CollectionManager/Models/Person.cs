@@ -1,4 +1,5 @@
 ﻿using Nest;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,16 +12,20 @@ namespace CollectionManager.Models
     {
         public const string ELASTIC_INDEX = "people";
 
-        [Text(Name = "id")]
+        [Text]
+        [JsonProperty("id")]
         public string Id { get; set; }
 
-        [Text(Name = "name")]
+        [Text]
+        [JsonProperty("name")]
         public string Name { get; set; }
 
-        [Text(Name = "email")]
+        [Text]
+        [JsonProperty("email")]
         public string Email { get; set; }
 
-        [Text(Name = "phone")]
+        [Text]
+        [JsonProperty("phone")]
         public string Phone { get; set; }
     }
 }

@@ -2,8 +2,6 @@
 using CollectionManager.Database;
 using Nest;
 using System.Collections.Generic;
-using Newtonsoft.Json;
-using System.Collections.ObjectModel;
 using System;
 
 namespace CollectionManager.DAO
@@ -52,6 +50,11 @@ namespace CollectionManager.DAO
             var titleType = item.Type.ToString().ToLower();
             var result = elastic.Delete<Item>(item, t=>t.Type(titleType));
             if (result.ServerError != null) throw new System.Exception(result.ServerError.Error.ToString());
+        }
+
+        public Item[] GetByFilter(Filter filter)
+        {
+            throw new NotImplementedException();
         }
     }
 }

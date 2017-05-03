@@ -36,9 +36,5 @@ namespace CollectionManager.Models
         [Text]
         [JsonProperty("type")]
         public ItemType Type { get; set; }
-        
-        [Nested]
-        [JsonProperty("loans")]
-        public List<Loan> Loans { get; set; }
     }
 }

@@ -13,5 +13,6 @@ namespace CollectionManager.DAO
         Item[] GetAll();
         void InsertTitle(Item title);
         void DeleteTitle(Item item);
+        Item[] GetByFilter(Filter filter);
     }
 }

@@ -193,7 +193,6 @@
     <Compile Include="Controllers\PersonController.cs" />
     <Compile Include="Controllers\PlaceController.cs" />
     <Compile Include="Controllers\ItemController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAO\LoanDAO.cs" />
     <Compile Include="DAO\LoanElasticServerDAO.cs" />
     <Compile Include="DAO\PersonDAO.cs" />
@@ -209,6 +208,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Filter.cs" />
     <Compile Include="Models\Loan.cs" />
     <Compile Include="Models\ModelWrapper.cs" />
     <Compile Include="Models\Person.cs" />
