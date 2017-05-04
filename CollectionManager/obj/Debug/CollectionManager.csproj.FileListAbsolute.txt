@@ -68,7 +68,6 @@ c:\users\xuma\documents\visual studio 2017\Projects\CollectionManager\Collection
 c:\users\xuma\documents\visual studio 2017\Projects\CollectionManager\CollectionManager\bin\Microsoft.AI.ServerTelemetryChannel.xml
 c:\users\xuma\documents\visual studio 2017\Projects\CollectionManager\CollectionManager\bin\Microsoft.AI.WindowsServer.xml
 c:\users\xuma\documents\visual studio 2017\Projects\CollectionManager\CollectionManager\bin\Microsoft.AI.Web.xml
-c:\users\xuma\documents\visual studio 2017\Projects\CollectionManager\CollectionManager\obj\Debug\CollectionManager.csprojResolveAssemblyReference.cache
 c:\users\xuma\documents\visual studio 2017\Projects\CollectionManager\CollectionManager\obj\Debug\CollectionManager.dll
 c:\users\xuma\documents\visual studio 2017\Projects\CollectionManager\CollectionManager\obj\Debug\CollectionManager.pdb
 c:\Users\xuma\Documents\Visual Studio 2017\Projects\CollectionManager\CollectionManager\bin\Elasticsearch.Net.dll
@@ -80,3 +79,4 @@ c:\Users\xuma\Documents\Visual Studio 2017\Projects\CollectionManager\Collection
 C:\Users\xuma\Documents\Visual Studio 2017\Projects\CollectionManager\CollectionManager\bin\System.Web.Cors.dll
 C:\Users\xuma\Documents\Visual Studio 2017\Projects\CollectionManager\CollectionManager\bin\System.Web.Http.Cors.dll
 C:\Users\xuma\Documents\Visual Studio 2017\Projects\CollectionManager\CollectionManager\bin\System.Web.Http.Cors.xml
+C:\Users\xuma\Documents\Visual Studio 2017\Projects\CollectionManager\CollectionManager\obj\Debug\CollectionManager.csprojResolveAssemblyReference.cache

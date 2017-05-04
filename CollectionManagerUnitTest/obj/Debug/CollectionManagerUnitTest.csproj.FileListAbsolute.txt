@@ -1,0 +1,12 @@
+C:\Users\xuma\Documents\Visual Studio 2017\Projects\CollectionManager\CollectionManagerUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\xuma\Documents\Visual Studio 2017\Projects\CollectionManager\CollectionManagerUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\xuma\Documents\Visual Studio 2017\Projects\CollectionManager\CollectionManagerUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\xuma\Documents\Visual Studio 2017\Projects\CollectionManager\CollectionManagerUnitTest\bin\Debug\CollectionManagerUnitTest.dll
+C:\Users\xuma\Documents\Visual Studio 2017\Projects\CollectionManager\CollectionManagerUnitTest\bin\Debug\CollectionManagerUnitTest.pdb
+C:\Users\xuma\Documents\Visual Studio 2017\Projects\CollectionManager\CollectionManagerUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\xuma\Documents\Visual Studio 2017\Projects\CollectionManager\CollectionManagerUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\xuma\Documents\Visual Studio 2017\Projects\CollectionManager\CollectionManagerUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\xuma\Documents\Visual Studio 2017\Projects\CollectionManager\CollectionManagerUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\xuma\Documents\Visual Studio 2017\Projects\CollectionManager\CollectionManagerUnitTest\obj\Debug\CollectionManagerUnitTest.csprojResolveAssemblyReference.cache
+C:\Users\xuma\Documents\Visual Studio 2017\Projects\CollectionManager\CollectionManagerUnitTest\obj\Debug\CollectionManagerUnitTest.dll
+C:\Users\xuma\Documents\Visual Studio 2017\Projects\CollectionManager\CollectionManagerUnitTest\obj\Debug\CollectionManagerUnitTest.pdb
