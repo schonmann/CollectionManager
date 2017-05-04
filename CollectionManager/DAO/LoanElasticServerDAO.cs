@@ -55,7 +55,7 @@ namespace CollectionManager.DAO
 
         public void EndLoan(ModelWrapper wrapper)
         {
-            //Create new loan object with item's and person's id, saving it's start date.
+            //Create new loan object with end date for partial update in Elastic.
             var item = wrapper.Item;
             var person = wrapper.Person;
             var newLoan = new Loan
@@ -64,7 +64,7 @@ namespace CollectionManager.DAO
                 EndDate = wrapper.Date,
                 Ended = true
             };
-            //Insert loan in ElasticSearch.
+            //Update loan in ElasticSearch.
             var elastic = ElasticServer.GetClient();
             var path = new DocumentPath<Loan>(newLoan);
             var res = elastic.Update<Loan>(path, x => x.Doc(newLoan));
