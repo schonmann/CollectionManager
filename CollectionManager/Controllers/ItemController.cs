@@ -3,6 +3,9 @@ using CollectionManager.Models;
 using System.Web.Http;
 using Nest;
 using CollectionManager.Database;
+using System.Net.Http;
+using System;
+using System.Net;
 
 namespace CollectionManager.Controllers
 {
@@ -11,9 +14,15 @@ namespace CollectionManager.Controllers
     {
         [HttpGet]
         [Route("all")]
-        public Item[] GetAll()
+        public HttpResponseMessage GetAll()
         {
-            return new ItemElasticServerDAO().GetAll();
+            try {
+                Item[] items = new ItemElasticServerDAO().GetAll();
+                return Request.CreateResponse(HttpStatusCode.OK, items);
+            }catch(Exception e) {
+                HttpError err = new HttpError(e.Message);
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, err);
+            }
         }
 
         [HttpGet]
