@@ -41,7 +41,7 @@ namespace CollectionManager.DAO
             var elastic = ElasticServer.GetClient();
             var itemType = item.Type.ToString().ToLower();
             var path = new DocumentPath<Item>(item).Type(itemType);
-            var res = elastic.Update<Item>(path, x => x.Doc(item));
+            var res = elastic.Update(path, x => x.Doc(item));
             if (res.ServerError != null) throw new System.Exception(res.ServerError.Error.ToString());
         }
 
