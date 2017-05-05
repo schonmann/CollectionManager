@@ -27,7 +27,7 @@ namespace CollectionManager.DAO
         }
         
         //Insert title to database.
-        public void InsertTitle(Item item)
+        public void InsertItem(Item item)
         {
             var elastic = ElasticServer.GetClient();
             var itemType = item.Type.ToString().ToLower();
@@ -36,19 +36,20 @@ namespace CollectionManager.DAO
         }
 
         //Update title in the database.
-        public void UpdateTitle(Item item)
+        public void UpdateItem(Item item)
         {
             var elastic = ElasticServer.GetClient();
-            var path = new DocumentPath<Item>(item);
+            var itemType = item.Type.ToString().ToLower();
+            var path = new DocumentPath<Item>(item).Type(itemType);
             var res = elastic.Update<Item>(path, x => x.Doc(item));
             if (res.ServerError != null) throw new System.Exception(res.ServerError.Error.ToString());
         }
 
-        public void DeleteTitle(Item item)
+        public void DeleteItem(Item item)
         {
             var elastic = ElasticServer.GetClient();
-            var titleType = item.Type.ToString().ToLower();
-            var result = elastic.Delete<Item>(item, t=>t.Type(titleType));
+            var itemType = item.Type.ToString().ToLower();
+            var result = elastic.Delete<Item>(item, t=>t.Type(itemType));
             if (result.ServerError != null) throw new System.Exception(result.ServerError.Error.ToString());
         }
 

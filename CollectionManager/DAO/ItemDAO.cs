@@ -11,8 +11,8 @@ namespace CollectionManager.DAO
     {
         Item GetById(string ID);
         Item[] GetAll();
-        void InsertTitle(Item title);
-        void DeleteTitle(Item item);
+        void InsertItem(Item title);
+        void DeleteItem(Item item);
         Item[] GetByFilter(Filter filter);
     }
 }

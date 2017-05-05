@@ -36,5 +36,9 @@ namespace CollectionManager.Models
         [Text]
         [JsonProperty("type")]
         public ItemType Type { get; set; }
+
+        [Text]
+        [JsonProperty("img")]
+        public string Img { get; set; }
     }
 }
