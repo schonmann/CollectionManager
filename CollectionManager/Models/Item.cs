@@ -29,9 +29,9 @@ namespace CollectionManager.Models
         [JsonProperty("data_sheet")]
         public Dictionary<String, String> DataSheet {get;set;}
         
-        [Nested]
+        [Text]
         [JsonProperty("place_id")]
-        public long PlaceId { get; set; }
+        public string Place_Id { get; set; }
          
         [Text]
         [JsonProperty("type")]
