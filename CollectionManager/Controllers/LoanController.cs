@@ -16,14 +16,14 @@ namespace CollectionManager.Controllers
         [Route("start")]
         public void StartLoan([FromBody]ModelWrapper wrapper)
         {
-            new LoanElasticServerDAO().StartLoan(wrapper);
+            new LoanElasticServerDAO().StartLoan(wrapper.Item, wrapper.Person, wrapper.Date);
         }
 
         [HttpPost]
         [Route("end")]
         public void EndLoan([FromBody]ModelWrapper wrapper)
         {
-            new LoanElasticServerDAO().EndLoan(wrapper);
+            new LoanElasticServerDAO().EndLoan(wrapper.Item, wrapper.Person, wrapper.Date);
         }
 
         [HttpGet]

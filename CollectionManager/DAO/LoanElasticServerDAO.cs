@@ -34,12 +34,9 @@ namespace CollectionManager.DAO
             return new List<Loan>(res.Documents).ToArray();
         }
 
-        public void StartLoan(ModelWrapper wrapper)
+        public void StartLoan(Item item, Person person, DateTime date)
         {
             //Create new loan object with item's and person's id, saving it's start date.
-            var item = wrapper.Item;
-            var person = wrapper.Person;
-            var date = wrapper.Date;
             var newLoan = new Loan
             {
                 Id = item.Id + person.Id,
@@ -53,15 +50,13 @@ namespace CollectionManager.DAO
             if (result.ServerError != null) throw new System.Exception(result.ServerError.Error.ToString());
         }
 
-        public void EndLoan(ModelWrapper wrapper)
+        public void EndLoan(Item item, Person person, DateTime date)
         {
             //Create new loan object with end date for partial update in Elastic.
-            var item = wrapper.Item;
-            var person = wrapper.Person;
             var newLoan = new Loan
             {
                 Id = item.Id + person.Id,
-                EndDate = wrapper.Date,
+                EndDate = date,
                 Ended = true
             };
             //Update loan in ElasticSearch.
